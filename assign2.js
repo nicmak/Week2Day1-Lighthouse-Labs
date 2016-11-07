@@ -14,6 +14,7 @@ function getAndPrintHTMLChunks () {
 
     response.on('data', function (data) {
         buffChunk += data  
+        //console.log(data);
       });
       
  
