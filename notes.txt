@@ -1,0 +1,10 @@
+Node.js Streams:
+
+streams, read/write data from or to a data source in a continuous manner, allows us to send or receive data chunks, callbacks used to handle those events...
+
+fs module; to read from and write to filesystem
+
+zlib; to compress and decompress files as .gz files
+
+process.stdin/process.stdout(read input from and log output to the terminal
+ -->
