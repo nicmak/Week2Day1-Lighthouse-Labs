@@ -1,4 +1,5 @@
 var https = require('https');
+var buffChunk = " "
 
 function getAndPrintHTMLChunks () {
   
@@ -12,23 +13,28 @@ function getAndPrintHTMLChunks () {
     response.setEncoding('utf8');
 
     response.on('data', function (data) {
-      var emptyString = ""
-      emptyString += data
-      return emptyString
+        buffChunk += data  
+      });
       
-      console.log('Chunk Received', data, '/n');
-
-    });
-  
+ 
     response.on('end', function () {
       console.log('We are done receiving');
+      console.log(buffChunk);
+    
     });
-  
+
+
+
   });
+  
+
+  
+}
 
 
 
 
-};
+
+
 
 getAndPrintHTMLChunks(process.argv);
